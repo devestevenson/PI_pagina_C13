@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-family: 'Cocogoose Classic Trial';
+}
+.login {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form__box {
+    border: 1px solid #0dccac;
+    width: 500px;
+    padding: 40px;
+    background-color: #ffffff;
+    text-align: center;
+    border-radius: 1rem;
+}
+.form__tittle {
+    color: #0dccac;
+}
+.email,
+.password,
+.send {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    padding: 12px 10px;
+    text-align: center;
+    border: 2px solid #0dccac;
+    width: 240px;
+    outline: none;
+    color: #0dccac;
+    border-radius: 30px;
+    transition: .3s;
+}
+.email:focus,
+.password:focus {
+    width: 280px;
+    border-color: #0dccac;
+}
+.send {
+    width: 180px;
+    border: 0;
+    cursor: pointer;
+    border: 2px solid #0dccac;
+    color: #0dccac;
+}
+.send:hover {
+    background-color: #0dccac;
+    color: #ffffff;
+}
+.forget__password {
+    text-decoration: none;
+    color: #0dccac;
+}
+
+
+
+
+
+/* MODO OSCURO */
+
+.dark .form__box {
+    background-color: #0f0f0f;
+}
+.dark .form__tittle {
+    color: #FFCB05;
+}
+.dark .email,
+.dark .password,
+.dark .send {
+    border: 2px solid #FFCB05;
+    color: #FFCB05;
+}
+.dark .email:focus,
+.dark .password:focus {
+    border-color: #FFCB05;
+}
+.dark .send {
+    background-color: #ffffff;
+}
+.dark .send:hover {
+    background-color: #FFCB05;
+    color: #ffffff;
+}
+.dark .forget__password {
+    color: #FFCB05;
+}

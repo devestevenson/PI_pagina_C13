@@ -1,0 +1,586 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Cocogoose Classic Trial';
+}
+ul {
+    list-style: none;
+}
+.nav a {
+    text-decoration: none;
+    font-weight: 800;
+}
+.nav {
+    width: 90%;
+    height: 60px;
+    background-color: #FFFFFF;
+    margin: 20px auto;
+    padding: 0 1.5rem;
+    border-radius: 30px;
+    border:  1px solid #707070;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* ----- LOGO POR AHORA ----- */
+.nav__logo {
+    color: #000000;
+    font-size: 1rem;
+}
+.nav__logo span {
+    color: #0DCCAC;
+}
+/* ---------- * --------- */
+.nav__box {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.nav__link {
+    color: #707070;
+    font-size: 1rem;
+    transition: .5s ease;
+}
+.nav__toggle {
+    display: none;
+    cursor: pointer;
+}
+.toggle__bar {
+    display: block;
+    width: 24px;
+    height: 2px;
+    border-radius: 1px;
+    background-color: #000000;
+    margin: 5px auto;
+    transition: all .3s ease-in-out;
+}
+.nav__login{
+    color: #FFFFFF;
+    padding: .5rem 1rem;
+    background-color: #0DCCAC;
+    border-radius: 30px;
+    transition: .3s ease;
+}
+.nav__login a {
+    color: #FFFFFF;
+}
+.nav__login:hover {
+    transform: scale(1.03);
+}
+/* -------------- * ----------------- */
+
+/* ---------- EMCABEZADO (HEADER) ----------------- */
+.header {
+    width: 90%;
+    height: auto;
+    margin: 80px auto;
+
+    display: grid;
+    place-items: center;
+
+}
+.header__tittle {
+    text-transform: uppercase;
+    font-size: 3.5rem;
+    /* line-height: 56px; */
+    text-align: center;
+    max-width: 840px;
+    color: #000000;
+    font-weight: 900;
+    margin-bottom: 40px;
+}
+.header__tittle span {
+    color: transparent;
+    -webkit-text-stroke: 1px #0DCCAC;
+    cursor: pointer;
+    transition: .3s ease;
+}
+.header__tittle span:hover {
+    color: #0DCCAC;
+}
+.header__banner {
+    width: 100%;
+    height: 700px;
+    overflow: hidden;
+    border-radius: 20px;
+}
+.header__banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+/* --------- SECTION NOSOTROS (ABOUT) -------- */
+.about {
+    width: 100%;
+    height: 100vh;
+    margin: 40px auto;
+    padding: 2rem;
+    background-color: #0DCCAC;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.about__subtittle {
+    max-width: 800px;
+    color: #FFFFFF;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    line-height: 3rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+.about__subtittle span {
+    font-weight: 800;
+}
+.indicarAbajo {
+    font-size: 2.5rem;
+    text-decoration: none;
+    animation: alternate infinite indicarAbajo 1s;
+}
+.indicarAbajo:hover {
+    animation-play-state: paused;
+}
+@keyframes indicarAbajo {
+    0%{
+        transform: translateY(0%);    
+    }
+    100%{
+        transform: translateY(50%);
+    }
+}
+
+/* ---------- SECTION CARRERAS (CAREERS) ---------- */
+.careers {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: baseline;
+}
+.careers__box {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.careers__box a {
+    text-decoration: none;
+    color: #0DCCAC;
+    text-transform: uppercase;
+    font-size: 40px;
+    font-weight: 800;
+}
+.careers__box a span {
+    color: #FFFFFF;
+    font-family: 'Gill Sans MT', sans-serif;
+    font-size: 2rem;
+    background-color: #0DCCAC;
+    padding: 0 .6rem;
+    border-radius: 50%;
+}
+.careers__box p {
+    color: #707070;
+    font-size: 20px;
+}
+.box {
+    margin: 2rem 0;
+    cursor: pointer;
+}
+
+/* ----------- NOTICIAS (NEWS) ------------- */
+.news {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #EEEEEE;
+    padding: 30px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.news__tittle {
+    text-transform: uppercase;
+    color: #000000;
+    font-size: 2rem;
+    max-width: 400px;
+    line-height: 2.5rem;
+    margin: 10px 0;
+}
+.news__carrusel {
+    position: relative;
+    width: 80%;
+    height: 500px;
+    margin: auto;
+}
+.news__carrusel li {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity .5s ease-out;
+}
+.news__carrusel li img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+}
+.news__carrusel li:first-child {
+    opacity: 1; /*se muestra el primer li*/
+}
+.news__carrusel li:target {
+    opacity: 1; /*muestra los li del enlace que se pulse*/
+}
+.news__text {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 30%;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 0 0 20px 20px;
+    transition: opacity .5s ease-out;
+}
+.news__paragraph {
+    color: #FFFFFF;
+    font-size: 1.25rem;
+}
+.news__link {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 1.25rem;
+    padding: 10px 24px;
+    border: 1px solid #FFFFFF;
+    border-radius: 50px;
+    transition: .5s;
+}
+.news__link:hover {
+    color: #000000;
+    background-color: #FFFFFF;
+}
+.news__buttons {
+    text-align: center;
+    margin-top: 30px;
+}
+.news__buttons li {
+    display: inline-block;
+    margin: 0 3px;
+}
+.news__buttons li a {
+    line-height: 36px;
+    display: block;
+    text-decoration: none;
+    color: #0DCCAC;
+    font-size: 1.25rem;
+    width: 36px;
+    height: 36px;
+    background-color: #FFFFFF;
+    border: 1px solid #0DCCAC;
+    border-radius: 50%;
+    transition: .5s ease;
+}
+.news__buttons li a:hover {
+    color: #FFFFFF;
+    background-color: #0DCCAC;
+}
+.news__buttons li a:active {
+    color: #0DCCAC;
+}
+
+
+/* -------------- PIE DE PAGINA (FOOTER) -----------------*/
+footer {
+    width: 100%;
+    height: 140px;
+    background-color: #0DCCAC;
+
+    display: grid;
+    place-items: center;
+}
+.foot__box {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row wrap;
+}
+footer h3, h4 {
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+footer h3, h4 span {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 800;
+}
+footer h4 span {
+    font-weight: 800;
+    color: #000000;
+}
+.icon__box {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    margin: 0 .2rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mode {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    background-color: #FFCB05;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* MODO OSCURO */
+.dark .mode {
+    background-color: #0DCCAC;
+}
+.dark {
+    background-color: #0F0F0F;
+}
+.dark .nav {
+    background-color: #FFCB05;
+}
+.dark .nav__logo span {
+    color: #FFFFFF;
+}
+.dark .nav__link {
+    color: #FFFFFF;
+}
+.dark .nav__login {
+    background-color: #000000;
+}
+.dark .nav__link:hover {
+    color: #000000;
+}
+.dark h1{
+    color: #FFFFFF;
+}
+.dark .box p {
+    color: #FFFFFF;
+}
+.careers__tittle {
+    color: #FFFFFF;
+}
+.dark h1 span {
+    -webkit-text-stroke: 1px #FFCB05;
+}
+.dark h1 span:hover {
+    color: #FFCB05;
+}
+.dark .about {
+    background-color: #FFCB05;
+}
+.dark .news {
+    background-color: #FFCB05;
+}
+.dark .box a {
+    color: #FFCB05;
+}
+.dark .box a span {
+    background-color: #FFCB05;
+}
+.dark footer {
+    background-color: #0F0F0F;
+}
+.dark .foot__box h4 span {
+    color: #FFCB05;
+}
+/* ---------- * ------------ */
+
+
+
+
+
+.top__button {
+    border: 2px solid #1655B2;
+    background-color: #FFFFFF;
+    position: fixed;
+    top: 80%;
+    right: 44px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: #1655B2;
+    text-decoration: none;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .4s;
+}
+.top__button:hover {
+    transform: scale(1.05);
+    background-color: #1655B2;
+    color: #FFFFFF;
+}
+.top__button.topActive {
+    bottom: 2rem;
+    pointer-events: auto;
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+/* ---------- Responsive NAV ---------- */
+    .nav__toggle {
+        display: block;
+    }
+    .nav__toggle.navActive .toggle__bar:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+    .nav__toggle.navActive .toggle__bar:nth-child(2) {
+        opacity: 0;
+    }
+    .nav__toggle.navActive .toggle__bar:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+    .nav__box {
+        width: 90%;
+        height: 50%;
+        background-color: #FFFFFF;
+        gap: 10;
+        flex-direction: column;
+        justify-content: center;
+
+        position: fixed;
+        top: 100px;
+        left: -90%;
+        border:  1px solid #707070;
+        border-radius: 40px;
+        transition: .3s ease-in-out;
+    }
+    .dark .nav__box {
+        background-color: #FFCB05;
+    }
+    .nav__item {
+        width: 80%;
+        padding: 1rem 0;
+        border: 1px solid #707070;
+        border-radius: 30px;
+        text-align: center;
+        transition: .4s ease;
+        background-color: #FFFFFF;
+    }
+    .nav__login {
+        width: 80%;
+        padding: 1rem 0;
+        border: 1px solid black;
+        border-radius: 30px;
+        text-align: center;
+    }
+    .nav__item:hover {
+        transform: scale(1.03);
+    }
+    .nav__link {
+        color: #000000;
+    }
+    .dark .nav__link {
+        color: #000000;
+    }
+    .nav__box.navActive {
+        left: 5%;
+    }
+}
+
+
+@media (max-width: 480px) {
+/* ---------- ENCABEZADO (HEADER) ---------- */
+    .header__tittle {
+        font-size: 2.5rem;
+    }
+ /* ---------- NOSOTROS (ABOUT) ---------- */
+    .about__subtittle {
+        font-size: 1.7rem;
+        line-height: 2.3rem;
+    }
+    /* ---------- CARRERAS (CAREERS) ---------- */
+    .careers {
+        flex-direction: column;
+        justify-content: space-around;
+        width: 80%;
+        margin: 0 auto;
+    }
+    .box {
+        margin: 1.5rem 0;
+    }
+    .careers__box h2 {
+        font-size: 28px;
+    }
+    .careers__box p {
+        font-size: .8rem;
+        color: #0DCCAC;
+    }
+    footer {
+        padding: 1rem 0;
+        height: 160px;
+    }
+    .foot__box {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+
+
+@media (max-width: 360px) {
+ /* ---------- ENCABEZADO (HEADER) ---------- */
+    .header__tittle {
+        font-size: 2rem;
+    }
+ /* ---------- NOSOTROS (ABOUT) ---------- */
+    .about__subtittle {
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+}
