@@ -29,7 +29,7 @@ ul {
     justify-content: space-between;
     align-items: center;
 }
-/* ----- LOGO POR AHORA ----- */
+/* ----- LOGO POR AHORA -----
 .nav__logo {
     color: #000000;
     font-size: 1rem;
@@ -37,7 +37,11 @@ ul {
 .nav__logo span {
     color: #0DCCAC;
 }
-/* ---------- * --------- */
+---------- * --------- */
+.nav__logo img {
+    width: 140px;
+    line-height: 70px;
+}
 .nav__box {
     display: flex;
     align-items: center;
@@ -367,9 +371,9 @@ footer h4 span {
 .dark .nav {
     background-color: #FFCB05;
 }
-.dark .nav__logo span {
+/* .dark .nav__logo span {
     color: #FFFFFF;
-}
+} */
 .dark .nav__link {
     color: #FFFFFF;
 }
